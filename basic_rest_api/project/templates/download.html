@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DD_Download_Video</title>
+    <style>
+        body {
+            background-color: #00FFFF;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #00FFFF;
+            color: #555;
+            font-size: 14px;
+         }
+    </style>
+</head>
+<body>
+    <h1>DD_Download_Video</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="{{ form.link.id_for_label }}">Video link:</label>
+        {{ form.link }}
+        <button type="submit">Download</button>
+    </form>
+</body>
+<footer>
+    <p>&copy; 2023 <strong>DEBANKA DAS</strong>. All rights reserved.</p>
+ </footer>
+</html>
